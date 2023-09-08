@@ -1,2 +1,3 @@
-export * from './MealPlans'
-export * from './Recipes'
+export * from './Eat'
+export * from './Home'
+export * from './Search'

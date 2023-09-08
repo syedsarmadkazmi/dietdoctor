@@ -2,10 +2,10 @@ import { View, Text } from "react-native";
 import { GStyles } from "~theme";
 
 
-export function Recipes() {
+export function MealPlansTab() {
     return (
         <View style={GStyles.container}>
-            <Text>Recipes Screen</Text>
+            <Text>MealPlans Screen</Text>
         </View>
     )
 }

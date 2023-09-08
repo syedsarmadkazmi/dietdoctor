@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
+import { TabNavigator } from "../../navigation/TabNavigator";
 import { GStyles } from "~theme";
 
 
-export function MealPlans() {
+export function Search() {
     return (
         <View style={GStyles.container}>
-            <Text>MealPlans Screen</Text>
+            <TabNavigator/>
         </View>
     )
 }
