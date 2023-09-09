@@ -22,10 +22,11 @@ This repository showcases a feature implementation for the Diet Doctor mobile ap
 
 ## Implementation Screenshots
 
-![Recipes Screen](https://drive.google.com/file/d/1A0ohSKL-cEhj2y_ZxXXj4uQH519gKi_U/view?usp=sharing)
-![Mealplan Screen](https://drive.google.com/file/d/1h5lULFyyFAxfR-xs8RcgnEstaa5Myfjl/view?usp=sharing)
-![Search Filters](https://drive.google.com/file/d/11DPNSt1czJVUPWNV0tV76ypAWLcFAM8L/view?usp=sharing)
-![Filters Applied](https://drive.google.com/file/d/1woAoY7PlZYftPFApKL9WtpLNugyWou45/view?usp=sharing)
+<img src="https://github.com/syedsarmadkazmi/dietdoctor/assets/36984862/87ef3816-2264-48bf-a78f-3b7571913853" alt="Recipes Screen" style="width:200px;"/>
+<img src="https://github.com/syedsarmadkazmi/dietdoctor/assets/36984862/e4b5edbc-b40d-4313-86ed-e4c2a21ed0e0" alt="Mealplan Screen" style="width:200px;"/>
+<img src="https://github.com/syedsarmadkazmi/dietdoctor/assets/36984862/3794bbaa-1761-4e2f-97ed-29e160b55d80" alt="Search Filters" style="width:200px;"/>
+<img src="https://github.com/syedsarmadkazmi/dietdoctor/assets/36984862/0dedabfc-2eb4-492b-bc80-0e1398d6ff10" alt="Filters Applied" style="width:200px;"/>
+
 
 ## How To Run The Project
 
