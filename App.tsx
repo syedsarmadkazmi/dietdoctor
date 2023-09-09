@@ -5,16 +5,20 @@ import { NavigationContainer } from "@react-navigation/native"
 import { GStyles } from "./src/theme"
 import { MainStackNavigator } from "./src/navigation/MainStackNavigator"
 import { NativeBaseProvider } from "native-base"
+import { Provider } from "react-redux"
+import { store } from "~redux"
 
 export default function App() {
 	return (
 		<NativeBaseProvider>
-			<View style={GStyles.appContainer}>
-				<StatusBar/>
-				<NavigationContainer>
-					<MainStackNavigator/>
-				</NavigationContainer>
-			</View>
+			<Provider store={store}>
+				<View style={GStyles.appContainer}>
+					<StatusBar/>
+					<NavigationContainer>
+						<MainStackNavigator/>
+					</NavigationContainer>
+				</View>
+			</Provider>
 		</NativeBaseProvider>
 	)
 }

@@ -10,6 +10,7 @@
       "~services": ["src/services"],
       "~theme": ["src/theme"],
       "~components": ["src/components"],
+      "~redux": ["src/redux"]
     },
   },
   "include": ["**/*.ts", "**/*.tsx"],
