@@ -1,11 +1,17 @@
-import { View, Text } from "react-native"
-import { GStyles } from "~theme"
+import { StyleSheet } from "react-native"
+import { ResultsList } from "../ResultsList"
+
 
 
 export function RecipesTab() {
 	return (
-		<View style={GStyles.container}>
-			<Text>RecipesTab Screen</Text>
-		</View>
+		<ResultsList/>
 	)
 }
+
+
+const styles = StyleSheet.create({
+	
+})
+
+
