@@ -10,7 +10,7 @@ export default function App() {
 	return (
 		<NativeBaseProvider>
 			<View style={GStyles.appContainer}>
-				<StatusBar />
+				<StatusBar/>
 				<NavigationContainer>
 					<MainStackNavigator/>
 				</NavigationContainer>

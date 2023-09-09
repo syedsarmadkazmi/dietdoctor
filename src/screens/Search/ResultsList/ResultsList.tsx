@@ -7,15 +7,7 @@ import { SearchResultsCard } from "~components"
 export function ResultsList() {
 	
 	return (
-		// <View style={GStyles.container}>
 		<Box style={styles.content} bgColor={"#dfeedf"} pt={95}>
-			{/* <TextInput 
-					value={value}
-					onChangeText={handleChange}
-					placeholder="Search"
-					rightElement={rightElement}
-				/> */}
-
 			<Box style={styles.results}>
 				<ScrollView showsVerticalScrollIndicator={false}>
 					<SearchResultsCard/>
@@ -32,12 +24,10 @@ export function ResultsList() {
 					<SearchResultsCard/>
 					<SearchResultsCard/>
 					<SearchResultsCard/>
-					<Text>Hello there</Text>
 				</ScrollView>
 
 			</Box>
 		</Box>
-		// </View>
 	)
 }
 

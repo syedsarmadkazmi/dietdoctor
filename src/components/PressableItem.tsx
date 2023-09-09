@@ -12,7 +12,6 @@ export function PressableItem({ children, ...otherProps }) {
 
 const styles = StyleSheet.create({
 	buttonStyle: {
-		height: "100%",
 		justifyContent: "center",
 		alignItems: "center"
 	},

@@ -1,10 +1,9 @@
-import { Box, Center, Divider, Flex, Heading, Image, Text, Circle } from "native-base"
+import { Box, Center, Divider, Flex, Image, Text, Circle } from "native-base"
 import { Entypo } from "@expo/vector-icons"
 import React from "react"
 import { PressableItem } from "../PressableItem"
 
 export function SearchResultsCard({ 
-	hideDivider = false,
 	showOptions = true,
 	title = "",
 	imageURL = "",
@@ -12,7 +11,6 @@ export function SearchResultsCard({
 }) {
 
 	return <>
-		{!hideDivider && <Divider />}
 		<Flex direction="row" h={130} overflow={"hidden"} borderRadius={10} my={3}>
 			<Flex w={"40%"} bgColor={"green.900"} overflow={"hidden"} borderRadius={10}>
 				<Image 
@@ -45,5 +43,6 @@ export function SearchResultsCard({
 			}
 			
 		</Flex>
+		<Divider />
 	</>   
 }

@@ -1,9 +1,33 @@
-import { Box, Input } from "native-base"
+import { Box, Center, Circle, Input, Square } from "native-base"
+import { Entypo, Ionicons } from "@expo/vector-icons"
+import React from "react"
 import { StyleSheet } from "react-native"
+import { PressableItem } from "./PressableItem"
 
 
-export function TextInput(props) {
+export function TextInput({
+	onClear,
+	onFilter,
+	...otherProps
+}) {
 
+	const { value } = otherProps
+
+	const rightElement = 
+		<Center h={"100%"} flexDir={"row"} paddingRight={2} bgColor={"#fff"}>
+			{value && <PressableItem onPress={onClear}>
+				<Square w="35px" h="35px">
+					<Entypo name="circle-with-cross" size={15} />
+				</Square>
+			</PressableItem>
+			}
+
+			<PressableItem onPress={onFilter}>
+				<Circle w="35px" h="35px" borderColor={"green.500"} borderWidth={1}>
+					<Ionicons name="filter-sharp" size={20} />
+				</Circle>
+			</PressableItem>
+		</Center>
 
 	return (
 		<Box style={styles.inputBox}>
@@ -12,7 +36,8 @@ export function TextInput(props) {
 				w="100%"
 				placeholder="Search"
 				variant={"outline"}
-				{...props}
+				rightElement={rightElement}
+				{...otherProps}
 				style={styles.inputStyle}
 			/>
 		</Box>
