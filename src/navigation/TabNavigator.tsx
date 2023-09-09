@@ -7,10 +7,10 @@ const Tab = createMaterialTopTabNavigator()
 export const TabNavigator = ({ screenProps }) => {
 	return (
 		<Tab.Navigator>
-			<Tab.Screen name="Recipes">
+			<Tab.Screen name="Recipes" options={{ title: "Recipes" }}>
 				{() => <RecipesTab {...screenProps} />}
 			</Tab.Screen>
-			<Tab.Screen name="MealPlans">
+			<Tab.Screen name="MealPlans" options={{ title: "Meal Plans" }}>
 				{() => <MealPlansTab {...screenProps} />}
 			</Tab.Screen>
 		</Tab.Navigator>
