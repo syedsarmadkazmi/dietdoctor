@@ -1,16 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { IRecipeState } from "~types"
 
-interface RecipeState {
-	tags: []
-	list: [],
-	mealplan: [],
-	searchKeyword: string
-	isLoading: boolean
-}
 
 const recipesSlice = createSlice({
 	name: "recipes",
-	initialState: <RecipeState> {
+	initialState: <IRecipeState> {
 		tags: [],
 		list: [],
 		mealplan: [],

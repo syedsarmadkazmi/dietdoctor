@@ -7,3 +7,5 @@ export const store = configureStore({
 		recipes: recipesReducer
 	}
 })
+
+export type RootState = ReturnType<typeof store.getState>

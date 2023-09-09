@@ -3,19 +3,19 @@ import { ResultsList } from "../ResultsList"
 import { GStyles } from "~theme"
 import { useEffect } from "react"
 import { useNavigation } from "@react-navigation/native"
-import { ETabName } from "~types"
+import { ETabName, ITabScreenProps } from "~types"
 import { useSelector } from "react-redux"
+import { RootState } from "~redux"
 
 const tabName = ETabName.RECIPES
 
-export function RecipesTab({
+export const RecipesTab: React.FC<ITabScreenProps> = ({
 	isLoading,
 	setCurrentTab	
-}) {
+}) => {
 	const navigation = useNavigation()
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const recipes = useSelector(({ recipes }: any) => recipes.list)
+	const recipes = useSelector(({ recipes }: RootState) => recipes.list)
 
 	useEffect(() => {
 		const unsubscribe = navigation?.addListener("focus", () => {

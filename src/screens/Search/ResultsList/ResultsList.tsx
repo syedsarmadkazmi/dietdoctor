@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native"
 import { SearchResultsCard } from "~components"
 import { ENV } from "~config"
 import { humanizeString } from "~services"
-import { ETabName } from "~types"
+import { ETabName, IItem, IResultProps } from "~types"
 
 
 
@@ -33,11 +33,11 @@ function renderItem(data, tabName) {
 }
 
 
-export function ResultsList({
+export const ResultsList: React.FC<IResultProps> = ({
 	isLoading = false,
 	tabName,
 	data
-}) {
+}) => {
 
 	return (
 		<Box style={styles.content} bgColor={"#dfeedf"} pt={95}>
@@ -55,7 +55,7 @@ export function ResultsList({
 						<FlatList
 							data={data}
 							extraData={data}
-							keyExtractor={(item) => item.id}
+							keyExtractor={(item: IItem) => item.id}
 							renderItem={(data) => renderItem(data, tabName)}
 						/>
 				}

@@ -124,7 +124,7 @@ export function Search() {
 					value={keyword}
 					onChangeText={handleChange}
 					placeholder="Search"
-					isFilterOn={filters.length}
+					isFilterOn={!!filters.length}
 					onClear={handleClearSearch}
 					onFilter={() => setModalVisible(true)}
 					onSubmitEditing={onSubmitEditing}
@@ -139,7 +139,7 @@ export function Search() {
 				title="Recipe Filters" 
 				visible={modalVisible} 
 				onClose={handleModalClose} 
-				selected={filters}
+				selected={filters as [string]}
 				onSelect={handleSelection}
 			/>
 		</View>

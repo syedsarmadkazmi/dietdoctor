@@ -3,13 +3,14 @@ import { Entypo } from "@expo/vector-icons"
 import React from "react"
 import { PressableItem } from "../PressableItem"
 import { ENV } from "~config"
+import { SearchResultsCardProps } from "~types"
 
-export function SearchResultsCard({ 
+export const SearchResultsCard: React.FC<SearchResultsCardProps>  = ({ 
 	showOptions = true,
 	title,
 	imageURL,
 	subTitle = null,
-}) {
+}) => {
 
 	return <>
 		<Flex direction="row" h={130} overflow={"hidden"} borderRadius={10} my={3}>

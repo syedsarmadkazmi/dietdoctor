@@ -3,13 +3,14 @@ import { Entypo, Ionicons } from "@expo/vector-icons"
 import React from "react"
 import { StyleSheet } from "react-native"
 import { PressableItem } from "./PressableItem"
+import { TextInputProps } from "~types"
 
 
-export function TextInput({
+export const TextInput: React.FC<TextInputProps>  = ({ 
 	onClear,
 	onFilter,
 	...otherProps
-}) {
+}) => {
 
 	const { value, isFilterOn } = otherProps
 

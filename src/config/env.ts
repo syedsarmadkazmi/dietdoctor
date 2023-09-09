@@ -1,4 +1,6 @@
-export const ENV = {
+import { IENV } from "~types"
+
+export const ENV: IENV = {
 	API_URL: "https://ddapi.prod.dietdoctor.com/v1",
 	IMAGE_BASE_URL: "https://www.dietdoctor.com",
 

@@ -6,17 +6,18 @@ import { NavHeader, PressableItem } from "~components"
 import { humanizeString, mapTagTypes } from "~services"
 import { GStyles } from "~theme"
 import { useSelector } from "react-redux"
+import { FiltersModalProps } from "~types"
+import { RootState } from "~redux"
 
-export function FiltersModal({
+export const FiltersModal: React.FC<FiltersModalProps>  = ({ 
 	title,
 	visible,
 	onClose,
 	selected,
 	onSelect,
-}) {
+}) => {
 
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const tags = useSelector(({ recipes }: any) => recipes?.tags)
+	const tags = useSelector(({ recipes }: RootState) => recipes?.tags)
 
 	return <Modal
 		animationType="fade"
