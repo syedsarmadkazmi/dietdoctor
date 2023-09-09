@@ -58,7 +58,6 @@ export function Search() {
 		if(filters && filters.length) variables["tagFilters"] = [...filters]
 
 		if(currentTab == ETabName.RECIPES) {
-			console.log("fetching recipes ", currentTab)
 			await getRecipes({
 				variables: {
 					...variables,
@@ -68,7 +67,6 @@ export function Search() {
 		}
 
 		if(currentTab == ETabName.MEALPLAN || !mealPlanResponse) {
-			console.log("fetching mealplans ", currentTab)
 			await getMealPlan({
 				variables: {
 					...variables,

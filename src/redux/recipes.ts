@@ -19,7 +19,6 @@ const recipesSlice = createSlice({
 			state.list = action.payload
 		},
 		updateMealplan: (state, action) => {
-			// console.log("payload ",  action?.payload)
 			state.mealplan = action.payload
 		},
 		toggleLoader: (state) => {
