@@ -1,15 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+interface RecipeState {
+	tags: []
+	list: [],
+	mealplan: [],
+	searchKeyword: string
+	isLoading: boolean
+}
+
 const recipesSlice = createSlice({
 	name: "recipes",
-	initialState: {
+	initialState: <RecipeState> {
 		tags: [],
+		list: [],
+		mealplan: [],
 		searchKeyword: "",
 		isLoading: false,
 	},
 	reducers: {
 		updateTags: (state, action) => {
 			state.tags = action.payload
+		},
+		updateList: (state, action) => {
+			state.list = action.payload
+		},
+		updateMealplan: (state, action) => {
+			// console.log("payload ",  action?.payload)
+			state.mealplan = action.payload
 		},
 		toggleLoader: (state) => {
 			state.isLoading = !state.isLoading
@@ -21,6 +38,8 @@ const recipesSlice = createSlice({
 })
 
 export const updateTags = recipesSlice.actions.updateTags
+export const updateList = recipesSlice.actions.updateList
+export const updateMealplan = recipesSlice.actions.updateMealplan
 export const toggleLoader = recipesSlice.actions.toggleLoader
 export const updateSearchKeyword = recipesSlice.actions.updateSearchKeyword
 

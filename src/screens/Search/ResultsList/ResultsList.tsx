@@ -1,31 +1,65 @@
-import { Box, ScrollView } from "native-base"
-import { StyleSheet, Text } from "react-native"
+import { Box, Text, Center, Spinner, Divider, Flex } from "native-base"
+import { FlatList } from "react-native"
+import { StyleSheet } from "react-native"
 import { SearchResultsCard } from "~components"
+import { ENV } from "~config"
+import { humanizeString } from "~services"
+import { ETabName } from "~types"
 
 
 
-export function ResultsList() {
-	
+function renderItem(data, tabName) {
+	const { item } = data
+	const isRecipies = tabName === ETabName.RECIPES
+	return <SearchResultsCard 
+		title={item?.title}
+		imageURL={item?.images?.vt || item?.image?.vt || ENV.FALLBACK_IMAGE}
+		subTitle={
+			(isRecipies) &&
+			<Flex direction="row" my={2}>
+				<Text fontSize={"sm"} color={"gray.500"}>{item?.time?.cook} min</Text>
+				<Divider mx="2" orientation="vertical" />
+				<Text fontSize={"sm"} color={"gray.500"}>{humanizeString(item?.difficulty?.rating)}</Text>
+				{item?.isMembersOnly &&
+					<>
+						<Divider mx="2" orientation="vertical" />
+						<Text fontSize={"sm"} color={"gray.500"}>Premium</Text>
+					</>
+				}
+			</Flex>
+		}
+		showOptions={isRecipies}
+	/>
+}
+
+
+export function ResultsList({
+	isLoading = false,
+	tabName,
+	data
+}) {
+
 	return (
 		<Box style={styles.content} bgColor={"#dfeedf"} pt={95}>
 			<Box style={styles.results}>
-				<ScrollView showsVerticalScrollIndicator={false}>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-					<SearchResultsCard/>
-				</ScrollView>
-
+				{isLoading ?
+					<Center flex={1}>
+						<Spinner accessibilityLabel="Loading posts" />
+					</Center>
+					:
+					!data?.length ?
+						<Center flex={1}>
+							<Text>No data found!</Text>
+						</Center>
+						:
+						<FlatList
+							data={data}
+							extraData={data}
+							keyExtractor={(item) => item.id}
+							renderItem={(data) => renderItem(data, tabName)}
+						/>
+				}
+				
 			</Box>
 		</Box>
 	)

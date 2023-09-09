@@ -11,7 +11,7 @@ export function TextInput({
 	...otherProps
 }) {
 
-	const { value } = otherProps
+	const { value, isFilterOn } = otherProps
 
 	const rightElement = 
 		<Center h={"100%"} flexDir={"row"} paddingRight={2} bgColor={"#fff"}>
@@ -23,8 +23,8 @@ export function TextInput({
 			}
 
 			<PressableItem onPress={onFilter}>
-				<Circle w="35px" h="35px" borderColor={"green.500"} borderWidth={1}>
-					<Ionicons name="filter-sharp" size={20} />
+				<Circle w="35px" h="35px" style={isFilterOn && styles.filterOn} borderColor={"#0ca50c"} borderWidth={1}>
+					<Ionicons name="filter-sharp" color={isFilterOn ? "#fff" : "#000"} size={20} />
 				</Circle>
 			</PressableItem>
 		</Center>
@@ -63,4 +63,8 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		fontSize: 16,
 	},
+	filterOn: {
+		backgroundColor: "#0ca50c",
+		color: "#fff",
+	}
 })

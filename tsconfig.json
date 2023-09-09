@@ -4,6 +4,7 @@
     "baseUrl": "./",
     "paths": {
       "~assets": ["assets"],
+      "~config": ["src/config"],
       "~screens": ["src/screens"],
       "~navigation": ["src/navigation"],
       "~types": ["src/types"],
