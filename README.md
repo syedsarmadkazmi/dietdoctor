@@ -1,6 +1,6 @@
 # Diet Doctor React Native Code Assignment - Sarmad Kazmi
 
-This repository showcases a feature implementation for the Diet Doctor mobile app using React Native. The task assigned was to develop a feature or screen of the app and style it according to personal preferences. For this assignment, I chose to create the **Recipe Search Screen with Filters**.
+This repository showcases a feature implementation for the Diet Doctor mobile app using React Native. The task assigned was to develop a feature or screen of the app and style it according to personal preferences. For this assignment, I chose to create the `Recipe Search Screen with Filters`.
 
 ## Features and Implementation Details
 
