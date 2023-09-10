@@ -16,7 +16,9 @@ This repository showcases a feature implementation for the Diet Doctor mobile ap
 
 -   **Directory Structure**: I've established a scalable directory structure for the project, making it easier to manage and navigate code files.
 
--   **Design Library**: Custom components have been designed as needed, with the assistance of the NativeBase design library.
+-   **Designs**: Custom components have been designed as needed, with the assistance of the NativeBase design library.
+
+-   **Barrel Expports**: to rollup exports from several modules into a single convenient module allowing neat import statements.
 
 -   **Async Storage**: Although I couldn't complete the Async Storage feature due to time constraints, I'm proficient in using it for offline user data access and caching.
 
