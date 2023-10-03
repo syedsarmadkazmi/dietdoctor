@@ -1,6 +1,6 @@
-# Diet Doctor React Native Code Assignment - Sarmad Kazmi
+# PlatePerfect - Sarmad Kazmi
 
-This repository showcases a feature implementation for the Diet Doctor mobile app using React Native. The task assigned was to develop a feature or screen of the app and style it according to personal preferences. For this assignment, I chose to create the `Recipe Search Screen with Filters`.
+Welcome to the MealMaster GitLab repository, home to a robust mobile application designed to make meal planning and recipe searching a breeze. MealMaster leverages the DietDoctors public API to provide users with a comprehensive database of meal plans and recipes, all at your fingertips.
 
 ## Features and Implementation Details
 
@@ -45,7 +45,7 @@ Before you can run this project, you need to have the following installed on you
 1. Clone this repository to your local machine:
 
 ```command
-git clone https://github.com/syedsarmadkazmi/dietdoctor.git
+git clone https://github.com/syedsarmadkazmi/plate-perfect.git
 ```
 2. Navigate to the project directory:
 
@@ -77,9 +77,4 @@ In the project directory, you can also run the following scripts:
 -   `npm run ios`: Open the app in the iOS simulator (Mac only).
 -   `npm run android`: Open the app in the Android emulator or a connected Android device.
 -   `npm test`: Launch the test runner in interactive mode.
-
-## Assignment Context
-Diet Doctor is actively seeking skilled developers to contribute to their mobile app.
-The assignment allows candidates to showcase their problem-solving and coding abilities.
-The main goal is to understand how candidates tackle tasks within a limited timeframe.
 
